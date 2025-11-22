@@ -2,14 +2,12 @@
   <VaNavbar class="app-layout-navbar py-2 px-0">
     <template #left>
       <div class="left">
+        <div class="va-title">
+          Mobile Store
+        </div>
         <Transition v-if="isMobile" name="icon-fade" mode="out-in">
-          <VaIcon
-            color="primary"
-            :name="isSidebarMinimized ? 'menu' : 'close'"
-            size="24px"
-            style="margin-top: 3px"
-            @click="isSidebarMinimized = !isSidebarMinimized"
-          />
+          <VaIcon color="primary" :name="isSidebarMinimized ? 'menu' : 'close'" size="24px" style="margin-top: 3px"
+            @click="isSidebarMinimized = !isSidebarMinimized" />
         </Transition>
       </div>
     </template>
@@ -55,11 +53,11 @@ const { isSidebarMinimized } = storeToRefs(GlobalStore)
   align-items: center;
   margin-left: 1rem;
 
-  & > * {
+  &>* {
     margin-right: 1rem;
   }
 
-  & > *:last-child {
+  &>*:last-child {
     margin-right: 0;
   }
 }
